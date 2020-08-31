@@ -1,0 +1,50 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+
+}
+
+header {
+     font-family: 'Open Sans Condensed', sans-serif;
+     display: block; /* Для старых браузеров */
+     height: 50px; /* Высота шапки */
+     margin: 0;
+     font-weight: bolder;
+}
+
+.site-logo{
+    font-size: 48px;
+    transition: opacity 200ms 200ms ease-in-out, width 0ms 0ms linear, flex-grow 0ms 0ms linear, flex-shrink 0ms 0ms linear;
+    margin-left: 40px;
+    color: #333333;
+}
+
+.nav-toggle-lines{
+    stroke: #333333;
+    transition: opacity 200ms 200ms ease-in-out, width 0ms 0ms linear, flex-grow 0ms 0ms linear, flex-shrink 0ms 0ms linear;
+}
+
+.icon-lines-nav-toggle {
+    color: #333333;
+    margin-left: 50px;
+    height: 24px;
+    width: 32px;
+}
+
+.icon-closed-nav-toggle{
+    color: #333333;
+    height: 24px;
+    width: 32px;
+}
+
+.nav-els{
+    color: #333333;
+    visibility: hidden;
+    font-size: 36px;
+    transition: opacity 200ms 200ms ease-in-out, width 0ms 0ms linear, flex-grow 0ms 0ms linear, flex-shrink 0ms 0ms linear;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+

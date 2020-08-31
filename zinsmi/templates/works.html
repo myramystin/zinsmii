@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/header.css'  %}" rel="stylesheet">
+    <title>ZINSMII</title>
+    <nav class="header-nav">
+        <a class="nav-toggle-lines">
+            <svg id="navToggleLinesIcon" class="icon-lines-nav-toggle" viewBox="0 0 24 18">
+                <g class="svg-icon-lines">
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="2" x2="24" y2="2"></line>
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="9" x2="24" y2="9"></line>
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="16" x2="24" y2="16"></line>
+                </g>
+            </svg>
+             <svg class="icon-closed-nav-toggle"id="navToggleClosedIcon"viewBox="0 0 24 18" visibility="hidden" >
+                <g class="svg-icon">
+                    <line fill="none" stroke-miterlimit="10" stroke-linecap="butt" x1="0" y1="0" x2="18" y2="18"></line>
+                    <line fill="none" stroke-miterlimit="10" stroke-linecap="butt" x1="18" y1="0" x2="0" y2="18"></line>
+                </g>
+            </svg>
+        </a>
+
+
+        <a id="site-logo" class="site-logo" href="/">
+                ZINSMII
+        </a>
+        <a class="nav-els" id="navWorks" href="/works">
+                Наши работы
+        </a>
+        <a class="nav-els" id="navUs" href="/us">
+            О нас
+        </a>
+        <a class="nav-els" id="navContacts" href="/contacts">
+            Контакты
+        </a>
+    </nav>
+    <title></title>
+
+</head>
+<script type="text/javascript">
+    let nav_button = document.getElementById('navToggleLinesIcon');
+    let nav_closed_button=document.getElementById('navToggleClosedIcon');
+    let logo = document.getElementById('site-logo');
+    let works = document.getElementById('navWorks');
+    let us = document.getElementById('navUs');
+    let contacts = document.getElementById('navContacts');
+    nav_button.onclick = function () {
+        nav_button.style.visibility = "hidden";
+        nav_closed_button.style.visibility = "visible";
+        logo.style.visibility = "hidden";
+        works.style.visibility = "visible";
+        us.style.visibility = "visible";
+        contacts.style.visibility = "visible";
+    };
+    nav_closed_button.onclick = function () {
+        nav_closed_button.style.visibility = "hidden";
+        nav_button.style.visibility = "visible";
+        logo.style.visibility = "visible";
+        works.style.visibility = "hidden";
+        us.style.visibility = "hidden";
+        contacts.style.visibility = "hidden";
+    }
+</script>
+
+
+{% load static %}
+
+<p>
+<link href="{% static 'css/main.css'  %}" rel="stylesheet">
+
+<body>
+    <style>
+
+        a{
+            text-decoration: none;
+            color: #333333;
+        }
+        a:visited{
+            color: #333333;
+        }
+        a:active{
+            color: #333333;
+        }
+        .overlay-text{
+            font-size: 26px;
+            color: #333333;
+        }
+        .image-div-hover:hover .image{
+            opacity: 0.3;
+        }
+        .image-div-hover:hover .image-vertical{
+            opacity: 0.3;
+        }
+        .image-div-hover:hover .overlay{
+            opacity: 1;
+        }
+        .image-div-hover:hover .overlay-vertical{
+            opacity: 1;
+        }
+        .overlay{
+            opacity: 0;
+            transform: translate(0, -1500%);
+            margin-bottom: 0;
+        }
+        .overlay-vertical{
+            opacity: 0;
+            transform: translate(0, -850%);
+            margin-bottom: 0;
+        }
+        .name-bottom-tex-big{
+            font-size: 30px;
+            color: #333333;
+            margin-top: 0;
+        }
+        .descr-bottom-tex-big{
+            font-size: 26px;
+            color: #333333
+
+        }
+        .image-vertical{
+            width: 520px;
+            height: 565px
+        }
+        .image{
+            width: 1183px;
+            height: 1014px;
+        }
+        .pic-div{
+            margin-bottom: 50px
+        }
+    </style>
+    <div style="margin: 5% 15%;">
+        <!-- 1 -->
+        <div align="center" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image" src="{% static 'images/works_page_images/pic-1.jpeg' %}">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big"  >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big"  >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 2 -->
+        <div align="center" style="display: inline-block" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-2.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 3 -->
+        <div align="center" style="display: inline-block; float: right" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0; " >
+                <img class="image-vertical" src="{% static 'images/works_page_images/pics--2-4.jpeg' %}" >
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 4 -->
+        <div align="center"  class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-3-1.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 5 -->
+        <div align="center" style="display: inline-block" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-3-2.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 6 -->
+        <div align="center" style="display: inline-block; float: right" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0; " >
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-3-3.jpeg' %}" >
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+         <!-- 7 -->
+        <div align="center"  class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pics--2-4-6.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+                <!-- 8 -->
+        <div align="center" style="display: inline-block" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-5-1.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 9 -->
+        <div align="center" style="display: inline-block; float: right" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0; " >
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-5-2.jpeg' %}" >
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+         <!-- 10 -->
+        <div align="center"  class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-6.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+                <!-- 11 -->
+        <div align="center" style="display: inline-block" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-7-1.jpeg' %}">
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+        <!-- 12 -->
+        <div align="center" style="display: inline-block; float: right" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0; " >
+                <img class="image-vertical" src="{% static 'images/works_page_images/pic-7-2.jpeg' %}" >
+                 <div class="overlay-vertical">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big" >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big" >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+
+         <!-- 13 -->
+        <div align="center" class="pic-div">
+            <div class="image-div-hover" style="margin-bottom: 0">
+                <img class="image" src="{% static 'images/works_page_images/pics--3-8-9.jpeg' %}">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        длинное описание
+                    </div>
+                </div>
+            </div>
+            <div align="center" class="name-bottom-tex-big"  >
+                    НАЗВАНИЕ
+                </div>
+                <div align="center" class="descr-bottom-tex-big"  >
+                    короткая информация (цена/ etc)
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <style>
+        footer{
+            background-color: #333333;
+            color: white;
+            font-family: 'Open Sans Condensed', sans-serif;
+            display: block; /* Для старых браузеров */
+            bottom: 0;
+            min-height: 140px;
+            position: relative;
+        }
+    </style>
+    <div align="center" style="font-size: 28px; margin-bottom: 0">
+        <br>
+            ZINSMII 2020
+    </div>
+        <div style="text-align: center;">
+            <a href="https://www.instagram.com/zinsmii/" style="color: #888888; font-size: 20px" >zinsmii on instagram</a>
+        </div>
+
+</footer>
+</html>

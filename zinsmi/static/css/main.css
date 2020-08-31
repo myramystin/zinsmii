@@ -1,0 +1,19 @@
+.main-top-els{
+    margin-left: 40%;
+    margin-right: 40% ;
+    font-size: 30px;
+    color: #333333;
+}
+
+.main-bottom-els{
+    font-size: 30px;
+    color: #333333;
+}
+
+.mainpage-image-right{
+    float: right;
+}
+
+.button-div:hover .image-btn{
+    opacity: 0.3;
+}

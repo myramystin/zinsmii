@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'css/header.css'  %}" rel="stylesheet">
+    <title>ZINSMII</title>
+    <nav class="header-nav">
+        <a class="nav-toggle-lines">
+            <svg id="navToggleLinesIcon" class="icon-lines-nav-toggle" viewBox="0 0 24 18">
+                <g class="svg-icon-lines">
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="2" x2="24" y2="2"></line>
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="9" x2="24" y2="9"></line>
+                    <line fill="none" stroke-miterlimit="10" x1="0" y1="16" x2="24" y2="16"></line>
+                </g>
+            </svg>
+             <svg class="icon-closed-nav-toggle"id="navToggleClosedIcon"viewBox="0 0 24 18" visibility="hidden" >
+                <g class="svg-icon">
+                    <line fill="none" stroke-miterlimit="10" stroke-linecap="butt" x1="0" y1="0" x2="18" y2="18"></line>
+                    <line fill="none" stroke-miterlimit="10" stroke-linecap="butt" x1="18" y1="0" x2="0" y2="18"></line>
+                </g>
+            </svg>
+        </a>
+
+
+        <a id="site-logo" class="site-logo" href="/">
+                ZINSMII
+        </a>
+        <a class="nav-els" id="navWorks" href="/works">
+                Наши работы
+        </a>
+        <a class="nav-els" id="navUs" href="/us">
+            О нас
+        </a>
+        <a class="nav-els" id="navContacts" href="/contacts">
+            Контакты
+        </a>
+    </nav>
+    <title></title>
+
+</head>
+<script type="text/javascript">
+    let nav_button = document.getElementById('navToggleLinesIcon');
+    let nav_closed_button=document.getElementById('navToggleClosedIcon');
+    let logo = document.getElementById('site-logo');
+    let works = document.getElementById('navWorks');
+    let us = document.getElementById('navUs');
+    let contacts = document.getElementById('navContacts');
+    nav_button.onclick = function () {
+        nav_button.style.visibility = "hidden";
+        nav_closed_button.style.visibility = "visible";
+        logo.style.visibility = "hidden";
+        works.style.visibility = "visible";
+        us.style.visibility = "visible";
+        contacts.style.visibility = "visible";
+    };
+    nav_closed_button.onclick = function () {
+        nav_closed_button.style.visibility = "hidden";
+        nav_button.style.visibility = "visible";
+        logo.style.visibility = "visible";
+        works.style.visibility = "hidden";
+        us.style.visibility = "hidden";
+        contacts.style.visibility = "hidden";
+    }
+</script>
+
+<body>
+<style>
+    a{
+            text-decoration: none;
+            color: #333333;
+        }
+        a:visited{
+            color: #333333;
+        }
+        a:active{
+            color: #333333;
+        }
+</style>
+</body>
+<footer>
+    <style>
+        footer{
+            background-color: #333333;
+            color: white;
+            font-family: 'Open Sans Condensed', sans-serif;
+         display: block; /* Для старых браузеров */
+            bottom: 0;
+            height: 140px;
+        }
+    </style>
+    <div align="center" style="font-size: 28px; margin-bottom: 0">
+        <br>
+            ZINSMII 2020
+    </div>
+        <div style="text-align: center;">
+            <a href="https://www.instagram.com/zinsmii/" style="color: #888888; font-size: 20px" >zinsmii on instagram</a>
+        </div>
+
+</footer>
+</html>
